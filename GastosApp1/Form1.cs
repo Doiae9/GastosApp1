@@ -12,10 +12,15 @@ namespace GastosApp1
 {
     public partial class Form1 : Form
     {
+        
+       
         public Form1()
         {
+          
             InitializeComponent();
         }
+        internal static double presupuesto;
+
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
@@ -80,6 +85,11 @@ namespace GastosApp1
         private void iconButton5_Click(object sender, EventArgs e)
         {
             AbrirFormulario(new GenerarInformes());
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

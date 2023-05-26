@@ -12,20 +12,18 @@ namespace ClaseGasto
 
         int id = 0;
         DateTime fecha;
-        string[] categoria = new string[] { "Salud", "Alimentacion", "Transporte", "Entretenimiento", "Varios" };
-
+        string categoria;
         double monto;
         string descripcion;
         //Protected funciona en la misma biblioteca de clases
         public Gasto()
         {
             //En teoría se debe de incrementar al crear un objeto nuevo.
-            id = ++id;
+   
         }
-        public Gasto(DateTime fecha, string[] categoria, double monto, string descripcion)
+        public Gasto(DateTime fecha, string categoria, double monto, string descripcion)
         {
             //Cada vez que se cree un objeto se incrementara automaticamente el id
-            id = ++id;
             this.fecha = fecha;
             this.categoria = categoria;
             this.monto = monto;
@@ -40,7 +38,7 @@ namespace ClaseGasto
 
         public string Descripcion { get { return descripcion; } set { descripcion = value; } }
 
-        public string[] Categoria { get { return categoria; } set { categoria = value; } }
+        public string Categoria { get { return categoria; } set { categoria = value; } }
 
     }
 }  

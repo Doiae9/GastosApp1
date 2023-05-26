@@ -19,7 +19,7 @@ namespace GastosApp1
 
         private void iconButton3_Click(object sender, EventArgs e)
         {
-
+           
         }
 
         private void iconButton1_Click(object sender, EventArgs e)
@@ -30,6 +30,13 @@ namespace GastosApp1
         private void GestionDePresupuestocs_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            //Se asigna el presupuesto
+            Form1.presupuesto = Convert.ToDouble(textBox1.Text);
+              
         }
     }
 }

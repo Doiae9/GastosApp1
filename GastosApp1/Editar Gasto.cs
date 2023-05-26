@@ -54,7 +54,29 @@ namespace GastosApp1
 
         private void iconButton5_Click(object sender, EventArgs e)
         {
+            //selected item
+            //Agregar Fecha con un CateTimePicker
+            NuevoGasto.Fecha = dtpFecha.Value;
+            //textbox Agregar Descripcion
+            NuevoGasto.Descripcion = txtDescipcion.Text.TrimEnd();
+            //textbox monto
+            NuevoGasto.Monto = Convert.ToDouble(txtMonto.Text);
+            //cmbCategoria 
+            NuevoGasto.Categoria = cmbCategoria.SelectedItem.ToString();
+            NuevoGasto.ID = GetNextId();
+            //Restar presupuesto con nuevo monto
+            Form1.presupuesto -= NuevoGasto.Monto;
+        }
 
+        private void iconButton1_Click_1(object sender, EventArgs e)
+        {
+            //boton eliminar
+            //dropear listview con list 
+            if(Item.Selected == true)
+            {
+
+            }
+            
         }
     }
 }

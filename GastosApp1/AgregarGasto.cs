@@ -14,8 +14,8 @@ namespace GastosApp1
     public partial class AgregarGasto : Form
     {
         List<Gasto> ListaGastos = new List<Gasto>();
-        double presupuesto = 0;
         
+       
         public AgregarGasto()
         {
             InitializeComponent();
@@ -27,9 +27,9 @@ namespace GastosApp1
             // Obtener el máximo ID actual en la lista de gastos
             foreach (Gasto gasto in ListaGastos)
             {
-                if (ListaGasto.Id > maxId)
+                // if (ListaGastos.ID > maxId)
                 {
-                    maxId = ListaGasto.Id;
+                    //maxId = ListaGastos.Id;
                 }
             }
             int nextId = maxId + 1;
@@ -59,20 +59,23 @@ namespace GastosApp1
         {
             Gasto NuevoGasto = new Gasto();
             //ComboBox Agregar Categoria
-           // NuevoGasto.Categoria = cmbCategoria;
+            // NuevoGasto.Categoria = cmbCategoria;
             //Agregar Fecha con un CateTimePicker
             NuevoGasto.Fecha = dtpFecha.Value;
             //textbox Agregar Descripcion
             NuevoGasto.Descripcion = txtDescipcion.Text.TrimEnd();
             //textbox monto
             NuevoGasto.Monto = Convert.ToDouble(txtMonto.Text);
+            //cmbCategoria 
+        NuevoGasto.Categoria= cmbCategoria.SelectedItem.ToString();
+            NuevoGasto.ID = GetNextId();
+            //Restar presupuesto con nuevo monto
+            Form1.presupuesto -= NuevoGasto.Monto;
 
-          //  NuevoGasto.ID = GetNextId();
-            presupuesto -= NuevoGasto.Monto;
-            if (presupuesto >= 0)
+            if (Form1.presupuesto >= 0)
             {
                 ListaGastos.Add(NuevoGasto);
-              LimpiarCampos();
+                LimpiarCampos();
             }
             else
             {
@@ -97,6 +100,7 @@ namespace GastosApp1
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+
 
         }
     }

@@ -30,8 +30,8 @@
         {
             this.listView1 = new System.Windows.Forms.ListView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.iconButton5 = new FontAwesome.Sharp.IconButton();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -59,14 +59,6 @@
             this.panel1.Size = new System.Drawing.Size(200, 108);
             this.panel1.TabIndex = 1;
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.iconButton1);
-            this.panel2.Location = new System.Drawing.Point(422, 340);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 108);
-            this.panel2.TabIndex = 2;
-            // 
             // iconButton5
             // 
             this.iconButton5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
@@ -88,6 +80,14 @@
             this.iconButton5.UseVisualStyleBackColor = false;
             this.iconButton5.Click += new System.EventHandler(this.iconButton5_Click);
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.iconButton1);
+            this.panel2.Location = new System.Drawing.Point(422, 340);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(200, 108);
+            this.panel2.TabIndex = 2;
+            // 
             // iconButton1
             // 
             this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
@@ -107,6 +107,7 @@
             this.iconButton1.Text = "Eliminar";
             this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton1.UseVisualStyleBackColor = false;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click_1);
             // 
             // Editar_Gasto
             // 
